@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Family Guard</string>
+    <string name="device_admin_description">Protects this device with time limits, schedules, and content filtering.</string>
+    <string name="filter_service_label">YouTube content filter</string>
+    <string name="accessibility_desc">Reads text on the YouTube screen and blocks content that matches the family keyword list.</string>
+    <string name="notif_channel">Protection status</string>
+    <string name="notif_title">Guard active</string>
+    <string name="notif_text">Enforcing limits and protecting this device</string>
+</resources>

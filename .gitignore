@@ -1,0 +1,21 @@
+# Backend
+backend/node_modules/
+backend/.wrangler/
+backend/dist/
+backend/.dev.vars
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
+*.keystore
+*.jks
+*.apk
+*.aab
+
+# OS / editor
+.DS_Store
+.idea/
+*.iml

@@ -1,0 +1,22 @@
+name = "parental-control"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+# D1 database (SQLite). Create it once with:
+#   npx wrangler d1 create parental-control
+# then paste the returned database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "parental-control"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+# Static dashboard served by the same Worker (Workers Static Assets).
+[assets]
+directory = "../dashboard"
+binding = "ASSETS"
+
+# Secrets to set before deploy (NOT committed to git):
+#   npx wrangler secret put API_SECRET
+#   npx wrangler secret put ADMIN_TOKEN
+[vars]
+# Optional non-secret runtime hints (keep secrets out of here).

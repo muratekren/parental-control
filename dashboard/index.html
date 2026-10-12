@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parental Control</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <!-- Login -->
+  <div id="login" class="login hidden">
+    <form id="login-form" class="login-card">
+      <h1>🔐 Parent Console</h1>
+      <p class="muted">Enter your admin token to manage devices.</p>
+      <input id="token-input" type="password" placeholder="Admin token" autocomplete="off" />
+      <button type="submit">Sign in</button>
+      <p id="login-error" class="error"></p>
+    </form>
+  </div>
+
+  <!-- App -->
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand">🛡️ Parental Control</div>
+      <div id="device-list" class="device-list"></div>
+      <div class="sidebar-footer">
+        <button id="refresh" class="ghost">Refresh</button>
+        <button id="logout" class="ghost">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <h2 id="dev-title">Select a device</h2>
+          <p id="dev-sub" class="muted"></p>
+        </div>
+        <div id="wallet-chip" class="wallet-chip"></div>
+      </header>
+
+      <nav id="tabs" class="tabs">
+        <button data-tab="overview" class="tab active">Overview</button>
+        <button data-tab="rules" class="tab">App Rules</button>
+        <button data-tab="schedules" class="tab">Schedules</button>
+        <button data-tab="keywords" class="tab">Keywords</button>
+        <button data-tab="chores" class="tab">Chores</button>
+        <button data-tab="rewards" class="tab">Rewards</button>
+        <button data-tab="usage" class="tab">Usage</button>
+      </nav>
+
+      <div id="panel" class="panel"></div>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
